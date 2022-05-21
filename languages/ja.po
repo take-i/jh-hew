@@ -16,7 +16,7 @@ msgid "Main Accent"
 msgstr "メインアクセント"
 
 #. Description of the plugin/theme
-#: wp-content/themes/pub/jhhew/style.css
+#: wp-content/themes/pub/JankHack-Hew/style.css
 msgid "JankHack-Hew is a personal blog theme with distinct identity and a splash of colour! It's all about sharing your thoughts and experiences, and connecting with your readers via prominently placed social media links."
 msgstr "JankHack-Hew は独自性とはじけるカラフルさが特徴の個人ブログ向けテーマです。考えや経験を共有したり、目立つ位置に配置されたソーシャルメディアリンクを活用して読者とのつながりを構築しましょう。"
 

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: JankHack-Hew 1.0.4-wpcom\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/jhhew\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/JankHack-Hew\n"
 "POT-Creation-Date: 2017-03-23 07:26:13+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -301,17 +301,17 @@ msgid "Search Results for: %s"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-#: wp-content/themes/pub/jhhew/style.css
+#: wp-content/themes/pub/JankHack-Hew/style.css
 msgid "JankHack-Hew"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-#: wp-content/themes/pub/jhhew/style.css
-msgid "http://wordpress.com/themes/jhhew"
+#: wp-content/themes/pub/JankHack-Hew/style.css
+msgid "http://wordpress.com/themes/JankHack-Hew"
 msgstr ""
 
 #. Description of the plugin/theme
-#: wp-content/themes/pub/jhhew/style.css
+#: wp-content/themes/pub/JankHack-Hew/style.css
 msgid ""
 "JankHack-Hew is a personal blog theme with distinct identity and a splash of colour! "
 "It's all about sharing your thoughts and experiences, and connecting with "
@@ -319,11 +319,11 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-#: wp-content/themes/pub/jhhew/style.css
+#: wp-content/themes/pub/JankHack-Hew/style.css
 msgid "Automattic"
 msgstr ""
 
 #. Author URI of the plugin/theme
-#: wp-content/themes/pub/jhhew/style.css
+#: wp-content/themes/pub/JankHack-Hew/style.css
 msgid "http://wordpress.com/themes/"
 msgstr ""

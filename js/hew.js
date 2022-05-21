@@ -2,7 +2,7 @@
 	$( document ).ready( function() {
 
 		// Focus styles for menus.
-		$( '.main-navigation' ).find( 'a' ).on( 'focus.jhhew blur.jhhew', function() {
+		$( '.main-navigation' ).find( 'a' ).on( 'focus.JankHack-Hew blur.JankHack-Hew', function() {
 			$( this ).parents().toggleClass( 'focus' );
 		} );
 

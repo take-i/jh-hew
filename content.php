@@ -17,7 +17,11 @@
 			</div><!-- .entry-meta -->
 
 			<?php if ( is_single() ) : ?>
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				<div class="flex">
+					<?php the_post_thumbnail('full'); ?>
+				
+				<h1 class="entry-title"><?php echo get_the_title(); ?></h1>
+				</div>
 			<?php else : ?>
 				<?php the_title( '<h1 class="entry-title"><a href=" ' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?>
 			<?php endif; ?>

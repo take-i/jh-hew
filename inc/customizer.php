@@ -1,8 +1,8 @@
 <?php
 /**
- * jhhew Theme Customizer
+ * JankHack-Hew Theme Customizer
  *
- * @package jhhew
+ * @package JankHack-Hew
  */
 
 /**

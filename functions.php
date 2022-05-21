@@ -153,17 +153,17 @@ function jhhew_fonts_url() {
  */
 function jhhew_scripts() {
 	// Add Open Sans and Noto Serif fonts.
-	wp_enqueue_style( 'jhhew-fonts', jhhew_fonts_url(), array(), null );
+	wp_enqueue_style( 'JankHack-Hew-fonts', jhhew_fonts_url(), array(), null );
 
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
 
-	wp_enqueue_style( 'jhhew-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'JankHack-Hew-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'jhhew-scripts', get_template_directory_uri() . '/js/jhhew.js', array( 'jquery' ), '20140909', true );
+	wp_enqueue_script( 'JankHack-Hew-scripts', get_template_directory_uri() . '/js/JankHack-Hew.js', array( 'jquery' ), '20140909', true );
 
-	wp_enqueue_script( 'jhhew-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'JankHack-Hew-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'jhhew-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'JankHack-Hew-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -303,3 +303,19 @@ function auto_post_slug( $slug, $post_ID, $post_status, $post_type ) {
 }
 add_filter( 'wp_unique_post_slug', 'auto_post_slug', 10, 4  );
 
+add_filter( 'upload_mimes', function ( $mimes ) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+});
+
+add_filter( 'manage_media_columns', function ( $columns ) {
+    echo '<style>.media-icon img[src$=".svg"]{width:100%;}</style>';
+    return $columns;
+});
+
+// 標準のFEEDを削除　コメント本体
+//　<link rel="alternate" type="application/rss+xml" title="JunkHack &raquo; フィード" href="/feed/">
+// <link rel="alternate" type="application/rss+xml" title="JunkHack &raquo; コメントフィード" href="/comments/feed/">
+//
+remove_action('wp_head', 'feed_links', 2);
+remove_theme_support('automatic-feed-links');

@@ -10,7 +10,9 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel="alternate" type="application/rss+xml" title="JunkHack &raquo; フィード" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="JunkHack &raquo; Yahoo フィード" href="/feed/yahoo/">
+<link rel="alternate" type="application/rss+xml" title="JunkHack &raquo; SmartNews フィード" href="/feed/smartnews/">
 
 <?php wp_head(); ?>
 </head>

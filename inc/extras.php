@@ -2,7 +2,9 @@
 /**
  * Custom functions that act independently of the theme templates
  *
- * @package jhhew
+ * Eventually, some of the functionality here could be replaced by core features
+ *
+ * @package JankHack-Hew
  */
 
 /**

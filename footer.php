@@ -14,11 +14,11 @@
 		<div class="site-info">
 			Copyleft - all rights reversed.
 			<span class="sep"> | </span>
-			JunkHack 2011 - 2021
+			JunkHack 2011 - 2022
 			<span class="sep"> | </span>
-			<a href="https://junkhack.gpl.jp/about-junkhack/">運営者情報<span class="gf"></a><span class="sep"> | </span>
-			<a href="https://junkhack.gpl.jp/sendmail/">お問い合わせ<span class="gf"></a><span class="sep"> | </span>
-			<a href="https://junkhack.gpl.jp/privacy/">プライバシーポリシー<span class="gf"></a>
+			<a href="https://hack.gpl.jp/about-junkhack/">運営者情報<span class="gf"></a><span class="sep"> | </span>
+			<a href="https://hack.gpl.jp/mail/">お問い合わせ<span class="gf"></a><span class="sep"> | </span>
+			<a href="https://hack.gpl.jp/privacy/">プライバシーポリシー<span class="gf"></a>
 		</div><!-- .site-info -->
 
 	</footer><!-- #colophon -->

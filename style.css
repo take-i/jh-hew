@@ -2,12 +2,12 @@
 Theme Name: JankHack-Hew
 Theme URI: https://junkhack.gpl.jp/
 Description: JankHack-Hew is a personal blog theme with distinct identity and a splash of colour! It's all about sharing your thoughts and experiences, and connecting with your readers via prominently placed social media links.
-Version: 1.0.0
+Version: 1.0.5
 Author: Automattic
-Author URI: https://junkhack.gpl.jp/category/wordpress/
+Author URI: https://github.com/take-i/jh-hew
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: jhhew
+Text Domain: JankHack-Hew
 */
 
 /*--------------------------------------------------------------
@@ -1047,6 +1047,7 @@ a[class*="tag-link-"]:hover {
 	font-weight: 700;
 	line-height: 1.4;
 	margin-bottom: 0.8333em;
+	margin-left: 10px;
 	text-align: center;
 	word-wrap: break-word;
 }
@@ -1640,6 +1641,20 @@ object {
 	}
 }
 @media screen and (min-width: 600px) {
+/* ==========================================================
+ Single title横画像
+========================================================== */
+.flex {
+	display: flex;
+	justify-content: center;
+}
+.flex > img {
+    height: 96px;
+    max-width: 96px;
+}
+.entry-title {
+	font-size: 2.8rem;
+}
 	.disp-small {
         display: none;
     }
@@ -1663,6 +1678,17 @@ object {
 	}
 }
 @media screen and (min-width: 744px) {
+/* ==========================================================
+ Single title横画像
+========================================================== */
+.flex {
+	display: flex;
+	justify-content: center;
+}
+.flex > img {
+    height: 96px;
+    max-width: 96px;
+}
 	.disp-small {
         display: none;
     }
@@ -1671,15 +1697,16 @@ object {
 	.entry-summary,
 	.entry-summary,
 	.entry-footer {
-		max-width: 696px;
+		max-width: 890px;
 	}
 	.entry-title {
 		font-family: "Open Sans", sans-serif;
 		font-size: 42px;
-		font-size: 4.2rem;
+		font-size: 3.0rem;
 		font-weight: 700;
 		line-height: 1.4285;
 		margin-bottom: 0.9523em;
+		margin-left: 10px;
 		text-align: center;
 		word-wrap: break-word;
 	}
@@ -1716,6 +1743,25 @@ object {
 	}
 }
 @media screen and (min-width: 888px) {
+/* ==========================================================
+ Single title横画像
+========================================================== */
+.flex {
+	display: flex;
+	justify-content: center;
+}
+.flex > img {
+    height: 96px;
+    max-width: 96px;
+}
+.entry-title {
+	font-size: 38px;
+	/* font-size: 3.8rem; */
+	font-weight: 700;
+	line-height: 1.4285;
+	margin-bottom: 0.9523em;
+	margin-left: 10px;
+}
 	.disp-small {
         display: none;
     }
@@ -1737,12 +1783,34 @@ object {
 	}
 }
 @media screen and (min-width: 1032px) {
+/* ==========================================================
+ Single title横画像
+========================================================== */
+.flex {
+	display: flex;
+	justify-content: center;
+}
+.flex > img {
+    height: 96px;
+    max-width: 96px;
+}
 	.entry-wrapper,
 	.entry-header {
 		max-width: 984px;
 	}
 }
 @media screen and (min-width: 1176px) {
+/* ==========================================================
+ Single title横画像
+========================================================== */
+.flex {
+	display: flex;
+	justify-content: center;
+}
+.flex > img {
+    height: 96px;
+    max-width: 96px;
+}
 	.disp-small {
         display: none;
     }
@@ -1800,6 +1868,25 @@ object {
 	}
 }
 @media screen and (max-width: 768px) {
+/* ==========================================================
+ Single title横画像
+========================================================== */
+.flex {
+	display: flex;
+	justify-content: center;
+}
+.flex > img {
+    height: 96px;
+    max-width: 96px;
+}
+.entry-title {
+	font-size: 42px;
+	font-size: 3.2rem;
+	font-weight: 700;
+	line-height: 1.4285;
+	margin-bottom: 0.9523em;
+	margin-left: 10px;
+}
 	.has-sidebar #masthead {
 		padding-right: 0;
 	}
@@ -1917,6 +2004,19 @@ object {
 }
 
 @media screen and (max-width: 480px) {
+/* ==========================================================
+ Single title横画像
+========================================================== */
+.flex {
+	display: flex;
+	justify-content: center;
+}
+
+.flex > img {
+	display:none;
+    height: 66px;
+    max-width: 66px;
+}
 	#masthead {
 		min-height: 40px;
 	}
@@ -2145,6 +2245,7 @@ object {
 }
 button, input[type="button"], input[type="reset"], input[type="submit"] {
     color:#393939;
+	margin-top: 15px;
 }	
 .article_contact .form_submit .submit_agreement {
     margin: 0 0 30px 0;
@@ -2375,7 +2476,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 }
 .to_faq-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 640px;
     margin: 20px auto 0;
     flex-wrap: wrap;
@@ -2543,3 +2644,16 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     .disp-small {
         display: none;
     }
+
+/* ==========================================================
+ Single title横画像
+========================================================== */
+.flex {
+	display: flex;
+	justify-content: center;
+}
+
+.flex > img {
+    height: 96px;
+    max-width: 96px;
+}
