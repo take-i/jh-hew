@@ -47,7 +47,7 @@ function jhhew_setup() {
 	) );
 
 	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'gallery', 'video', 'quote', 'link',
+		'aside',
 	) );
 
 	// Setup the WordPress core custom background feature.
@@ -319,3 +319,128 @@ add_filter( 'manage_media_columns', function ( $columns ) {
 //
 remove_action('wp_head', 'feed_links', 2);
 remove_theme_support('automatic-feed-links');
+
+// 縦書きテンプレート？
+function is_tategaki(){
+    // 投稿の縦書
+		if (get_post_format() === "aside") {
+			return true;
+    }
+		// ページテンプレート縦書き
+		if (is_page_template('page_single.php')) {
+			return true;
+		}
+		// ページテンプレート縦書き
+		if (is_page_template('page_27ate.php')) {
+			return true;
+		}
+		if (is_category()) {
+			return true;
+		}
+		
+}
+
+// 縦書きフォーマット（aside）の場合に必要なヘッダ出力
+function is_need_nehan() {
+	if (get_post_format() === "aside" && is_tategaki()) {
+		echo '
+		<link charset="utf-8" rel="stylesheet" type="text/css" href="' . get_template_directory_uri() . '/js/nehan2/nehan2.css" />
+		<script charset="utf-8" type="text/javascript" src="' . get_template_directory_uri() . '/js/nehan2/subject.js"></script>
+		<script charset="utf-8" type="text/javascript" src="' . get_template_directory_uri() . '/js/nehan2/Plugin_haiku.js"></script>
+		<script charset="utf-8" type="text/javascript" src="' . get_template_directory_uri() . '/js/nehan2/nehan2.js"></script>
+		<script type="text/javascript">
+			window.onload = function(){
+			var createPageFrame = function(body){
+				var node = document.createElement("div");
+				var style = node.style;
+				node.innerHTML = body;
+				node.className = "page-frame";
+				return node;
+			};
+
+			var outputAllPages = function(dstId, provider){
+				var pageNo = 0;
+				var dstNode = document.getElementById(dstId);
+
+				// add <subject> element to parser for easy markup(see subject.js)
+				Nehan.Plugin.defineSubjectElement(provider);
+				Nehan.Plugin_haiku.defineHaikuElement(provider);
+
+				while(provider.hasNextPage()){
+					var pageData = provider.outputPage(pageNo++);
+					var pageFrame = createPageFrame(pageData.html);
+					dstNode.appendChild(pageFrame);
+				}
+			};
+			
+			var text = document.getElementById("src-text").innerHTML;
+		';
+	}
+
+	if(is_page_template('page_single.php') && is_tategaki()){
+		echo '
+		// output vertical pages.13moji
+		outputAllPages("result-vertical", new Nehan.PageProvider({
+			direction:"vertical",
+			width:925,
+			height:220,
+			fontSize:16
+		}, text));
+		';
+	}
+	else if(is_page_template('page_27ate.php') && is_tategaki()){
+		echo '
+		// output vertical pages.27moji
+		outputAllPages("result-vertical", new Nehan.PageProvider({
+			direction:"vertical",
+			width:925,
+			height:440,
+			fontSize:16
+		}, text));
+		';
+	}
+	else if(is_page_template('default') && is_tategaki()){
+		echo '// output default page.';
+		echo '
+		// output vertical post.13moji
+		outputAllPages("result-vertical", new Nehan.PageProvider({
+			direction:"vertical",
+			width:890,
+			height:440,
+			fontSize:16
+		}, text));
+		';
+	}
+	else if(is_single() && is_tategaki()){
+		echo '
+		// output vertical post.13moji
+		outputAllPages("result-vertical", new Nehan.PageProvider({
+			direction:"vertical",
+			width:675,
+			height:440,
+			fontSize:16
+		}, text));
+		';
+	}
+	else if(is_tategaki()){
+		echo '// output default page.';
+		echo '
+		// output vertical post.13moji
+		outputAllPages("result-vertical", new Nehan.PageProvider({
+			direction:"vertical",
+			width:890,
+			height:440,
+			fontSize:16
+		}, text));
+		';
+	}
+
+	if (is_tategaki()) {
+		echo '
+		document.getElementById("progress").style.display = "none";
+		};
+		</script>
+		';
+	}
+
+}

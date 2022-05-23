@@ -301,7 +301,7 @@ function the_archive_title( $before = '', $after = '' ) {
 		$title = sprintf( __( 'Day: %s', 'jhhew' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'jhhew' ) ) );
 	} elseif ( is_tax( 'post_format' ) ) {
 		if ( is_tax( 'post_format', 'post-format-aside' ) ) {
-			$title = _x( 'Asides', 'post format archive title', 'jhhew' );
+			$title = "縦書";
 		} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
 			$title = _x( 'Galleries', 'post format archive title', 'jhhew' );
 		} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
@@ -320,7 +320,8 @@ function the_archive_title( $before = '', $after = '' ) {
 			$title = _x( 'Chats', 'post format archive title', 'jhhew' );
 		}
 	} elseif ( is_post_type_archive() ) {
-		$title = sprintf( __( 'Archives: %s', 'jhhew' ), post_type_archive_title( '', false ) );
+		// $title = sprintf( __( 'Archives: %s', 'jhhew' ), post_type_archive_title( '', false ) );
+		$title = "縦書";
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
 		/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */

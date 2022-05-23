@@ -1,5 +1,7 @@
 <?php
 /**
+ * 標準の投稿フォーマット
+ * 
  * @package JankHack-Hew
  */
 ?>

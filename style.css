@@ -2,8 +2,8 @@
 Theme Name: JankHack-Hew
 Theme URI: https://junkhack.gpl.jp/
 Description: JankHack-Hew is a personal blog theme with distinct identity and a splash of colour! It's all about sharing your thoughts and experiences, and connecting with your readers via prominently placed social media links.
-Version: 1.0.5
-Author: Automattic
+Version: 1.0.6
+Author: JunkHack
 Author URI: https://github.com/take-i/jh-hew
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1143,6 +1143,15 @@ a[class*="tag-link-"]:hover {
 }
 .entry-footer .edit-link a:hover {
 	color: #808080;
+}
+
+.page .article-tate {
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+.page-frame{
+	padding-top: 25px;
 }
 
 /*--------------------------------------------------------------

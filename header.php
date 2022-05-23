@@ -14,6 +14,8 @@
 <link rel="alternate" type="application/rss+xml" title="JunkHack &raquo; Yahoo フィード" href="/feed/yahoo/">
 <link rel="alternate" type="application/rss+xml" title="JunkHack &raquo; SmartNews フィード" href="/feed/smartnews/">
 
+<?php is_need_nehan() ; ?>
+
 <?php wp_head(); ?>
 </head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
