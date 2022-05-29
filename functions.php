@@ -342,13 +342,24 @@ function is_tategaki(){
 
 // 縦書きフォーマット（aside）の場合に必要なヘッダ出力
 function is_need_nehan() {
-	if (get_post_format() === "aside" && is_tategaki()) {
+	if (is_tategaki()) {
 		echo '
 		<link charset="utf-8" rel="stylesheet" type="text/css" href="' . get_template_directory_uri() . '/js/nehan2/nehan2.css" />
 		<script charset="utf-8" type="text/javascript" src="' . get_template_directory_uri() . '/js/nehan2/subject.js"></script>
 		<script charset="utf-8" type="text/javascript" src="' . get_template_directory_uri() . '/js/nehan2/Plugin_haiku.js"></script>
 		<script charset="utf-8" type="text/javascript" src="' . get_template_directory_uri() . '/js/nehan2/nehan2.js"></script>
 		<script type="text/javascript">
+
+		let pw = window.innerWidth;
+		let ph = window.innerHeight;
+		let wsize = 0;
+		function resizeWindow(event){
+				pw = window.innerWidth;
+				ph = window.innerHeight;
+		}
+	
+		window.addEventListener("resize", resizeWindow);
+
 			window.onload = function(){
 			var createPageFrame = function(body){
 				var node = document.createElement("div");
@@ -382,7 +393,7 @@ function is_need_nehan() {
 		// output vertical pages.13moji
 		outputAllPages("result-vertical", new Nehan.PageProvider({
 			direction:"vertical",
-			width:925,
+			width:${wsize},
 			height:220,
 			fontSize:16
 		}, text));
@@ -399,36 +410,62 @@ function is_need_nehan() {
 		}, text));
 		';
 	}
-	else if(is_page_template('default') && is_tategaki()){
-		echo '// output default page.';
+		else if(is_page_template('default') && is_tategaki()){
+		echo '// output default page1.';
 		echo '
-		// output vertical post.13moji
-		outputAllPages("result-vertical", new Nehan.PageProvider({
-			direction:"vertical",
-			width:890,
-			height:440,
-			fontSize:16
-		}, text));
+		if(pw < 480){
+			// output vertical post.27moji
+			outputAllPages("result-vertical", new Nehan.PageProvider({
+				direction:"vertical",
+				width:310,
+				height:440,
+				fontSize:16
+			}, text));
+		}
+		if(pw > 479 && pw < 600){
+			// output vertical post.27moji
+			outputAllPages("result-vertical", new Nehan.PageProvider({
+				direction:"vertical",
+				width:420,
+				height:440,
+				fontSize:16
+			}, text));
+		}
+		if(pw > 599 && pw < 744){
+			// output vertical post.27moji
+			outputAllPages("result-vertical", new Nehan.PageProvider({
+				direction:"vertical",
+				width:540,
+				height:440,
+				fontSize:16
+			}, text));
+		}
+		if(pw > 743 && pw < 889){
+			// output vertical post.27moji
+			outputAllPages("result-vertical", new Nehan.PageProvider({
+				direction:"vertical",
+				width:680,
+				height:440,
+				fontSize:16
+			}, text));
+		}
+		if(pw > 888){
+			// output vertical post.27moji
+			outputAllPages("result-vertical", new Nehan.PageProvider({
+				direction:"vertical",
+				width:890,
+				height:440,
+				fontSize:16
+			}, text));
+		}
 		';
 	}
 	else if(is_single() && is_tategaki()){
 		echo '
-		// output vertical post.13moji
+		// output vertical post.27moji
 		outputAllPages("result-vertical", new Nehan.PageProvider({
 			direction:"vertical",
-			width:675,
-			height:440,
-			fontSize:16
-		}, text));
-		';
-	}
-	else if(is_tategaki()){
-		echo '// output default page.';
-		echo '
-		// output vertical post.13moji
-		outputAllPages("result-vertical", new Nehan.PageProvider({
-			direction:"vertical",
-			width:890,
+			width:${wsize},
 			height:440,
 			fontSize:16
 		}, text));
