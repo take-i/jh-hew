@@ -14,13 +14,14 @@
 <link rel="alternate" type="application/rss+xml" title="JunkHack &raquo; Yahoo フィード" href="<?php echo esc_url( home_url( '/' ) ); ?>/feed/yahoo/">
 <link rel="alternate" type="application/rss+xml" title="JunkHack &raquo; SmartNews フィード" href="<?php echo esc_url( home_url( '/' ) ); ?>/feed/smartnews/">
 <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/manifest.json">
-<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/jh-icon192.png" sizes="192x192"/>
+<link rel="icon alternate" href="<?php echo get_template_directory_uri(); ?>/img/favicon-48.png" type="image/png">
+<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/apple-touch-icon180.png" sizes="180x180"/>
 <meta name="theme-color" content="#FAD641">
 <meta name="apple-mobile-web-app-title" content="JunkHack">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <script>
-if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator && 'localhost' !== window.location.hostname) {
 	window.addEventListener('load', function () {
 		navigator.serviceWorker.register('/sw.js').then(
 			function (registration) {
