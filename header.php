@@ -10,9 +10,29 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="alternate" type="application/rss+xml" title="JunkHack &raquo; フィード" href="/feed/">
-<link rel="alternate" type="application/rss+xml" title="JunkHack &raquo; Yahoo フィード" href="/feed/yahoo/">
-<link rel="alternate" type="application/rss+xml" title="JunkHack &raquo; SmartNews フィード" href="/feed/smartnews/">
+<link rel="alternate" type="application/rss+xml" title="JunkHack &raquo; フィード" href="<?php echo esc_url( home_url( '/' ) ); ?>/feed/">
+<link rel="alternate" type="application/rss+xml" title="JunkHack &raquo; Yahoo フィード" href="<?php echo esc_url( home_url( '/' ) ); ?>/feed/yahoo/">
+<link rel="alternate" type="application/rss+xml" title="JunkHack &raquo; SmartNews フィード" href="<?php echo esc_url( home_url( '/' ) ); ?>/feed/smartnews/">
+<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/manifest.json">
+<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/jh-icon192.png" sizes="192x192"/>
+<meta name="theme-color" content="#FAD641">
+<meta name="apple-mobile-web-app-title" content="JunkHack">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<script>
+if ('serviceWorker' in navigator) {
+	window.addEventListener('load', function () {
+		navigator.serviceWorker.register('/sw.js').then(
+			function (registration) {
+				console.log('ServiceWorker registration successful with scope: ', registration.scope);
+			},
+			function (err) {
+				console.log('ServiceWorker registration failed: ', err);
+			}
+		);
+	});
+}
+</script>
 
 <?php is_need_nehan() ; ?>
 
