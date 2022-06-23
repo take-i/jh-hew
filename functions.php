@@ -326,6 +326,10 @@ function is_tategaki(){
 		if (get_post_format() === "aside") {
 			return true;
     }
+		// 投稿フォーマットのタイプ 'aside' のアーカイブページが表示されているとき
+		// if (is_tax( 'post_format', 'post-format-aside' )) {
+		// 	return true;
+    // }
 		// ページテンプレート縦書き
 		if (is_page_template('page_single.php')) {
 			return true;
@@ -410,7 +414,7 @@ function is_need_nehan() {
 		}, text));
 		';
 	}
-		else if(is_page_template('default') && is_tategaki()){
+		else if(is_tategaki()){
 		echo '// output default page1.';
 		echo '
 		if(pw < 480){
@@ -458,17 +462,6 @@ function is_need_nehan() {
 				fontSize:16
 			}, text));
 		}
-		';
-	}
-	else if(is_single() && is_tategaki()){
-		echo '
-		// output vertical post.27moji
-		outputAllPages("result-vertical", new Nehan.PageProvider({
-			direction:"vertical",
-			width:${wsize},
-			height:440,
-			fontSize:16
-		}, text));
 		';
 	}
 
