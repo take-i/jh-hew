@@ -22,6 +22,7 @@
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
+			<?php echo do_shortcode( '[zokuhen]' ); ?>
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'jhhew' ) ); ?>
 			<?php
 				wp_link_pages( array(

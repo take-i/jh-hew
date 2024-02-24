@@ -14,7 +14,7 @@
 		<div class="site-info">
 			Copyleft - all rights reversed.
 			<span class="sep"> | </span>
-			JunkHack 2011 - 2022
+			JunkHack 2011 - 2024
 			<span class="sep"> | </span>
 			<a href="https://hack.gpl.jp/about-junkhack/">運営者情報<span class="gf"></a><span class="sep"> | </span>
 			<a href="https://hack.gpl.jp/mail/">お問い合わせ<span class="gf"></a><span class="sep"> | </span>
