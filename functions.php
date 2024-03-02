@@ -474,3 +474,19 @@ function is_need_nehan() {
 	}
 
 }
+
+// 
+//add_action( 'my_simply_static_cron_event', 'ssp_run_static_export_cron' );
+/**
+ * Run a full static export daily via WP-CRON.
+ *
+ * @return void
+ */
+//function ssp_run_static_export_cron() {
+//    // Full static export
+//	$simply_static = Simply_Static\Plugin::instance();
+//	$simply_static->run_static_export();
+//}
+
+add_filter( 'ssp_single_auto_export','__return_true' );
+
