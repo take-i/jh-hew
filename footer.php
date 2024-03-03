@@ -16,9 +16,9 @@
 			<span class="sep"> | </span>
 			JunkHack 2011 - 2024
 			<span class="sep"> | </span>
-			<a href="https://hack.gpl.jp/about-junkhack/">運営者情報<span class="gf"></a><span class="sep"> | </span>
-			<a href="https://hack.gpl.jp/mail/">お問い合わせ<span class="gf"></a><span class="sep"> | </span>
-			<a href="https://hack.gpl.jp/privacy/">プライバシーポリシー<span class="gf"></a>
+			<a href="https://hack.gpl.jp/about.html">運営者情報<span class="gf"></a><span class="sep"> | </span>
+			<a href="https://hack.gpl.jp/mail.html">お問い合わせ<span class="gf"></a><span class="sep"> | </span>
+			<a href="https://hack.gpl.jp/privacy.html">プライバシーポリシー<span class="gf"></a>
 		</div><!-- .site-info -->
 
 	</footer><!-- #colophon -->
